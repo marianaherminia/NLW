@@ -1,0 +1,133 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    /*Alinhamento de caixa(pelo lado de fora da caixa)*/
+    margin: 0 auto;
+}
+
+#page-create-point header{
+    margin-top: 48px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span{
+    margin-right: 10px;
+    background-image: url(../assets/arrow-left.svg); /*tem que colocar widht, heighr, display*/
+    display: flex;
+    
+    width: 20px;
+    height: 24px;
+}
+
+#page-create-point form{
+    background-color: white;
+
+    /*Alinhamento de caixa(pelo lado de fora da caixa) com margin top e botton de 80px*/
+    margin: 80px auto;
+
+    padding: 64px;
+
+    border-radius: 8px;
+
+    max-width: 730px; /*se colocar só até aqui, o padding vai fazer a caixa ficar maior do que isso
+    o box-sizing: border-box => faz a borda ser o limite, sendo que o padão é content*/
+    
+    
+}
+
+#page-create-point form h1{
+    font-size: 36px;
+}
+
+#page-create-point form h2{
+    font-size: 24px;
+}
+
+#page-create-point form fieldset{
+    margin-top: 64px;
+
+    border: 0; /*Retira o contorno*/
+}
+
+#page-create-point form legend{
+    margin-bottom: 40px;
+
+    border: 0; /*Retira o contorno*/
+}
+
+#page-create-point form .field{
+    flex: 1; /*para preencher todo espaço*/
+    
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+}
+
+#page-create-point form .field-group{
+    display: flex;
+}
+
+#page-create-point form input, form select{
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    outline: none; /*para retirar o traço preto*/
+
+}
+
+form select{
+    /*Alguns navegadores desconfiguram esses campos. Para resolver o problema:*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/*Configurar apenas o field que vier antecedido por outro. No caso, só tem dois fields, seleciona o segundo. Se houvessem mais fields, o primeiro não seria selecionado*/
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    border: 0;
+
+    margin-top: 40px;
+
+    transition: background-color 400ms; /*é possível especificar p quem vai a transição. Não são todas as propriedades que aceitam isso
+    */
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
