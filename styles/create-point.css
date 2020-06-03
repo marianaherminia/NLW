@@ -170,3 +170,13 @@ form button:hover{
 
     color: var(--title-color);
 }
+.items-grid li.selected{
+    /*li.selected quer dizer para pegar o li com a classe selected*/
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none; /*os eventos de pointer não existem nos filhos do li*/
+}

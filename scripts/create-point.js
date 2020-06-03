@@ -51,3 +51,47 @@ function getCities(event) {
 document
     .querySelector("select[name=uf]") //seleciona o select name uf
     .addEventListener("change", getCities)  //Escuta evento change e executa getCities com a mudança. A função aqui está sem () pois é passada por referência e lá na função é que tem getCities(event). Seria a mesma coisa de não colocar nada la e colocar aqui getCities(event)
+
+
+// Itens de coleta
+// pegar todos os li
+const ItensToCollect = document.querySelectorAll(".items-grid li")
+
+for ( let item of ItensToCollect){
+    item.addEventListener("click", handleSelectedItem)
+}
+
+let selectedItems = []
+
+function handleSelectedItem(event) {
+    const itemLi = event.target
+    // add or remove a class with JS
+    itemLi.classList.toggle("selected")
+    // itemLi.classList.remove
+    // itemLi.classList.add
+    //quando acontecer o evento vai pegar o dataset do id
+    const itemId = itemLi.dataset.id
+    
+  
+    //verificar se existem item selecionados
+    // pegar os itens selecionados
+
+    const alreadySelected = selectedItems.findIndex( item => {
+        const itemFound = item == itemId //true (if founded) or false
+        return itemFound
+    } )
+    // se já estiver selecionado, tirar da seleção
+    //método procura por um index de array
+    if(alreadySelected != -1) { //-1 é quando não está selecionado
+        //tirar da seleção
+        const filteredItems = selectedItems.filter ( item =>{
+            const itemIsDifferent = item != itemId
+            return itemIsDifferent
+        })
+    } 
+
+    //se não estiver selecionado, adicionar à seleção
+
+    // atualizar o campo escondido com os itens selecionados
+    
+}
