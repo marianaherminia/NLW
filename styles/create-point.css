@@ -131,3 +131,42 @@ form button{
 form button:hover{
     background-color: #2fb86e;
 }
+
+.items-grid {
+    list-style-type: none;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li{
+    background-color: #f5f5f5;
+
+    border: 2px solid  #f5f5f5;
+    border-radius: 8px;
+    
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;/*muda a diração do fluxo*/
+    align-items: center;
+    justify-content: space-between;/*como a diração do fluxo mudou, o space passa a ser na direction da column */
+
+    text-align: center; /*alinha os textos*/
+
+    cursor: pointer;
+}
+
+.items-grid li span{
+    margin-top: 12px;
+
+    flex:1; /*preenche o resto do espaço*/
+
+    display: flex;
+    align-items: center; 
+
+    color: var(--title-color);
+}
