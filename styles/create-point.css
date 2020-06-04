@@ -178,5 +178,5 @@ form button:hover{
 
 .items-grid li img,
 .items-grid li span{
-    pointer-events: none; /*os eventos de pointer não existem nos filhos do li*/
+    pointer-events: none; /*os eventos de pointer não existem nos filhos do li; para não serem clicados e sim o li*/
 }

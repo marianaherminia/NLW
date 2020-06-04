@@ -61,6 +61,9 @@ for ( let item of ItensToCollect){
     item.addEventListener("click", handleSelectedItem)
 }
 
+// campo escondido com os itens selecionados
+const collectedItems = document.querySelector("input[name=items]")
+
 let selectedItems = []
 
 function handleSelectedItem(event) {
@@ -82,16 +85,21 @@ function handleSelectedItem(event) {
     } )
     // se já estiver selecionado, tirar da seleção
     //método procura por um index de array
-    if(alreadySelected != -1) { //-1 é quando não está selecionado
+    if(alreadySelected != -1) { //-1 é quando não está selecionado. Se diferente de -1 (se não está selecionado)
         //tirar da seleção
         const filteredItems = selectedItems.filter ( item =>{
             const itemIsDifferent = item != itemId
             return itemIsDifferent
-        })
+        }) //entra no selectedItems e roda a função que escrevemos. Se a função retornar falso, o filter é executado e remove o elemento do array. Se a função retornar true, filter adiciona o elemento no novo array filteredItems
+        selectedItems = filteredItems 
+    }else{
+        //se não estiver selecionado, adicionar à seleção
+        //push coloca o elemento no array
+        selectedItems.push(ItemId)
     } 
-
-    //se não estiver selecionado, adicionar à seleção
-
+    
     // atualizar o campo escondido com os itens selecionados
+    collectedItems.value = selectedItems
+    
     
 }
