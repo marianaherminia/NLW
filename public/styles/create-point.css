@@ -5,7 +5,7 @@
     margin: 0 auto;
 }
 
-#page-create-point header{
+ header{
     margin-top: 48px;
     
     display: flex;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-#page-create-point header a{
+header a{
     color: var(--title-color);
     font-weight: bold;
 
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-#page-create-point header a span{
+header a span{
     margin-right: 10px;
     background-image: url(../assets/arrow-left.svg); /*tem que colocar widht, heighr, display*/
     display: flex;
@@ -30,7 +30,7 @@
     height: 24px;
 }
 
-#page-create-point form{
+form{
     background-color: white;
 
     /*Alinhamento de caixa(pelo lado de fora da caixa) com margin top e botton de 80px*/
@@ -46,27 +46,40 @@
     
 }
 
-#page-create-point form h1{
+form h1{
     font-size: 36px;
 }
 
-#page-create-point form h2{
-    font-size: 24px;
-}
 
-#page-create-point form fieldset{
+
+form fieldset{
     margin-top: 64px;
 
     border: 0; /*Retira o contorno*/
 }
 
-#page-create-point form legend{
+form legend{
     margin-bottom: 40px;
 
     border: 0; /*Retira o contorno*/
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
 }
 
-#page-create-point form .field{
+form h2{
+    font-size: 24px;
+}
+ form legend span{
+     font-size: 14px;
+    color: var(--title-color);
+}
+
+
+form .field{
     flex: 1; /*para preencher todo espaço*/
     
     display: flex;
@@ -75,11 +88,11 @@
     margin-bottom: 24px;
 }
 
-#page-create-point form .field-group{
+form .field-group{
     display: flex;
 }
 
-#page-create-point form input, form select{
+form input, form select{
     background-color: #f0f0f5;
 
     border: 0;

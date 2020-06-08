@@ -1,10 +1,10 @@
-#page-home{
+body{
     height: 100vh;
     background: url("../assets/home-background.svg") no-repeat;
     background-position: 35vw bottom; /*eixo x e eixo y*/
 }
 
-#page-home  header{
+header{
     display: flex;
     align-items: center;
     justify-content: space-between;   
@@ -12,7 +12,7 @@
     margin-top: 48px;
 }
 
-#page-home .content{
+.content{
     width: 90%;
     max-width: 1100px; /*fica até 90% e quando chega a 1100,para*/
     height: 100%;
@@ -23,13 +23,13 @@
     
 }
 
-#page-home header a{
+header a{
     display: flex;
     color: var(--title-color);
     font-weight: 700;
 }
 
-#page-home header a span{
+header a span{
     margin-right: 16px;
     display: flex;
     background-image: url('../assets/log-in.svg');
@@ -37,7 +37,7 @@
     height: 20px;
 }
 
-#page-home main{
+main{
     max-width: 560px;
     height: 600px;
     flex: 1;
@@ -46,19 +46,19 @@
     justify-content: center;
 }
 
-#page-home main h1{
+main h1{
     font-size: 54px;
     color: var(--title-color);
 }
 
-#page-home main p{
+main p{
     font-size: 24px;
     line-height: 38px;
     margin-top: 24px;
     color: var(--title-color);
 }
 
-#page-home main a{
+main a{
     width: 100%;
     max-width: 360px;
     height: 72px;
@@ -70,12 +70,12 @@
     transition: 400ms;
 }
 
-#page-home main a:hover{
+main a:hover{
    
     background-color: #2fb86e;
 }
 
-#page-home main a span{
+ main a span{
     width: 72px;
     height: 72px;
     background-color: rgba(0,0,0, 0.08);
@@ -87,14 +87,14 @@
     justify-content: center;
 }
 
-#page-home main a span::after{
+main a span::after{
     content:"";
     background-image: url('../assets/search.svg');
     width: 20px;
     height: 20px;
 }
 
-#page-home main a strong{
+main a strong{
     color: white;
     flex:1;
     text-align: center;
